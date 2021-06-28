@@ -15,7 +15,7 @@ export const login = async function(req: Request, res: Response) {
         username: Joi.string()
             .min(3)
             .max(32)
-            .regex(/[a-zA-Z0-9]/)
+            .regex(/^[a-zA-Z0-9]+$/)
             .required(),
         password: Joi.string()
             .min(15)
