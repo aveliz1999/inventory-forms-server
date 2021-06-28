@@ -48,3 +48,7 @@ export const login = async function(req: Request, res: Response) {
         return res.status(500).send({message: 'An error has occurred on the server.'})
     }
 }
+
+export const getDomain = async function(req: Request, res: Response) {
+    return res.status(200).send({domain: ldapConfig.userLoginDomain});
+}
