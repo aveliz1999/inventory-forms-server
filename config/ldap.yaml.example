@@ -5,3 +5,5 @@ baseDN: "dc=domain,dc=com"
 # Username and password to use to query the directory
 username: "username@domain.com"
 password: "password"
+
+userLoginDomain: "domain.com"

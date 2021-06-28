@@ -7,7 +7,8 @@ export type LdapConfig = {
     url: string,
     baseDN: string,
     username: string,
-    password: string
+    password: string,
+    userLoginDomain: string
 }
 
 export type DatabaseConfig = {

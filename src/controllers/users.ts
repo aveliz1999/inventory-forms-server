@@ -26,7 +26,7 @@ export const login = async function(req: Request, res: Response) {
     try {
         const {username, password} = await schema.validateAsync(req.body);
 
-        const authenticated = await AD.authenticate(username, password);
+        const authenticated = await AD.authenticate(`${username}@${ldapConfig.userLoginDomain}`, password);
         if(!authenticated) {
             return res.status(403).send({message: 'Invalid username or password'});
         }
