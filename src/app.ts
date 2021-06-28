@@ -1,6 +1,9 @@
 import express from 'express';
 import cookieParser from 'cookie-parser';
 import usersRouter from "./routes/users";
+import initSequelize from "./sequelize";
+
+initSequelize();
 
 const app = express();
 
